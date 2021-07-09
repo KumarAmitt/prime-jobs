@@ -1,5 +1,7 @@
 class JobsController < ApplicationController
   before_action :set_job, only: %i[show edit update destroy]
+  before_action :authenticate_user!, except: %i[index show]
+  before_action :correct_user, only: %i[edit update destroy]
 
   # GET /jobs or /jobs.json
   def index
@@ -11,7 +13,7 @@ class JobsController < ApplicationController
 
   # GET /jobs/new
   def new
-    @job = Job.new
+    @job = current_user.jobs.build
   end
 
   # GET /jobs/1/edit
@@ -19,7 +21,7 @@ class JobsController < ApplicationController
 
   # POST /jobs or /jobs.json
   def create
-    @job = Job.new(job_params)
+    @job = current_user.jobs.build(job_params)
 
     respond_to do |format|
       if @job.save
@@ -52,6 +54,11 @@ class JobsController < ApplicationController
       format.html { redirect_to jobs_url, notice: 'Job was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def correct_user
+    @job = current_user.jobs.find_by(id: params[:id])
+    redirect_to jobs_path, notice: 'Not Authorised to edit this job' if @job.nil?
   end
 
   private
