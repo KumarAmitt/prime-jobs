@@ -16,11 +16,21 @@ ActiveRecord::Schema.define(version: 2021_07_09_095600) do
   enable_extension "plpgsql"
 
   create_table "jobs", force: :cascade do |t|
+    t.integer "user_id"
     t.string "title"
     t.string "position"
     t.string "location"
+    t.integer "experience"
+    t.integer "salary"
+    t.integer "openings"
+    t.string "employment_type"
+    t.string "education"
+    t.string "skills"
+    t.text "job_description"
+    t.boolean "archived"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_jobs_on_user_id"
   end
 
 end

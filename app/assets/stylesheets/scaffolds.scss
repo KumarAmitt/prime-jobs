@@ -33,6 +33,12 @@ a:hover {
   background-color: #000;
 }
 
+table,
+td,
+th {
+  border: 1px solid black;
+}
+
 th {
   padding-bottom: 5px;
 }

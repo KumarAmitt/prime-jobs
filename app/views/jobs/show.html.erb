@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>User_id:</strong>
+  <%= @job.user_id %>
+</p>
+
+<p>
   <strong>Title:</strong>
   <%= @job.title %>
 </p>
@@ -13,6 +18,46 @@
 <p>
   <strong>Location:</strong>
   <%= @job.location %>
+</p>
+
+<p>
+  <strong>Experience:</strong>
+  <%= @job.experience %>
+</p>
+
+<p>
+  <strong>Salary:</strong>
+  <%= @job.salary %>
+</p>
+
+<p>
+  <strong>Openings:</strong>
+  <%= @job.openings %>
+</p>
+
+<p>
+  <strong>Employment Type:</strong>
+  <%= @job.employment_type %>
+</p>
+
+<p>
+  <strong>Education:</strong>
+  <%= @job.education %>
+</p>
+
+<p>
+  <strong>Skills:</strong>
+  <%= @job.skills %>
+</p>
+
+<p>
+  <strong>Job Description:</strong>
+  <%= @job.job_description %>
+</p>
+
+<p>
+  <strong>Archived:</strong>
+  <%= @job.archived %>
 </p>
 
 <%= link_to 'Edit', edit_job_path(@job) %> |
