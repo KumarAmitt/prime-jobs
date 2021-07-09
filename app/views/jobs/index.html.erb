@@ -36,9 +36,11 @@
         <td><%= job.skills %></td>
         <td><%= job.job_description %></td>
         <td><%= job.archived %></td>
-        <td><%= link_to 'Show', job %></td>
-        <td><%= link_to 'Edit', edit_job_path(job) %></td>
-        <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if current_user && current_user.id == job.user_id %>
+          <td><%= link_to 'Show', job %></td>
+          <td><%= link_to 'Edit', edit_job_path(job) %></td>
+          <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

@@ -37,7 +37,7 @@
   </thead>
 
   <tbody>
-  <% @jobs.each do |job| %>
+  <% @active_jobs.each do |job| %>
     <tr>
       <td><%= job.user_id %></td>
       <td><%= job.title %></td>
@@ -58,3 +58,6 @@
   <% end %>
   </tbody>
 </table>
+
+<br/>
+<%= link_to 'Post New Job', new_job_path %>

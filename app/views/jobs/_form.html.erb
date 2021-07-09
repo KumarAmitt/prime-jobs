@@ -17,12 +17,12 @@
   </div>
 
   <div class="field">
-    <%= form.label :title %>
+    <%= form.label :title, 'Job Title' %>
     <%= form.text_field :title %>
   </div>
 
   <div class="field">
-    <%= form.label :position %>
+    <%= form.label :position, 'Position / Role' %>
     <%= form.text_field :position %>
   </div>
 
@@ -37,13 +37,13 @@
   </div>
 
   <div class="field">
-    <%= form.label :salary %>
+    <%= form.label :salary, 'Salary' %>
     <%= form.text_field :salary %>
   </div>
 
   <div class="field">
     <%= form.label :openings %>
-    <%= form.text_field :openings %>
+    <%= form.number_field :openings %>
   </div>
 
   <div class="field">
@@ -67,8 +67,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :archived %>
-    <%= form.text_field :archived %>
+    <%= form.check_box :archived, {type: 'checkbox'}, true, false %>
+    <%= form.label :archived, 'Mark as Archived'%>
   </div>
 
   <div class="actions">

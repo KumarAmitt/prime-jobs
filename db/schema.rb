@@ -20,14 +20,14 @@ ActiveRecord::Schema.define(version: 2021_07_09_140504) do
     t.string "title"
     t.string "position"
     t.string "location"
-    t.integer "experience"
-    t.integer "salary"
+    t.string "experience"
+    t.string "salary"
     t.integer "openings"
     t.string "employment_type"
     t.string "education"
     t.string "skills"
     t.text "job_description"
-    t.boolean "archived"
+    t.boolean "archived", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_jobs_on_user_id"

@@ -5,14 +5,14 @@ class CreateJobs < ActiveRecord::Migration[6.1]
       t.string :title
       t.string :position
       t.string :location
-      t.integer :experience
-      t.integer :salary
+      t.string :experience
+      t.string :salary
       t.integer :openings
       t.string :employment_type
       t.string :education
       t.string :skills
       t.text :job_description
-      t.boolean :archived
+      t.boolean :archived, default: false
 
       t.timestamps
     end
