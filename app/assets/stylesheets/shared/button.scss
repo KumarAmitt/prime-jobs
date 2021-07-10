@@ -1,0 +1,15 @@
+@import "../config/constants";
+
+.button {
+  border: 1px solid $accent-color;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  color: $accent-color;
+  font-size: $font-s1;
+  cursor: pointer;
+  box-shadow: 1px 1px 2px 1px $accent-color;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+}

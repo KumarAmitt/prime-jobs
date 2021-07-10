@@ -1,12 +1,14 @@
-<h1>Prime Jobs</h1>
+<div class="navbar">
+  <h1 class="logo"><%= link_to 'Prime Jobs', root_path, class: 'logo' %></h1>
 
-<% if user_signed_in? %>
-  <%= link_to 'Edit Profile', edit_user_registration_path %>
-  <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
-<% else %>
-  <%= link_to 'Recruiter', new_user_session_path %>
-<% end %>
+  <div class="links">
+    <% if user_signed_in? %>
+      <%= link_to 'Edit Profile', edit_user_registration_path, class: 'button' %>
+      <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'button'%>
+    <% else %>
+     <%= link_to 'Recruiter', new_user_session_path, class: 'button' %>
+    <% end %>
+  </div>
+</div>
 
-
-<hr/>
 

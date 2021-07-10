@@ -1,4 +1,70 @@
+@import '../config/constants';
+
 .user-auth-container {
-  //background-image: url('background.jpg');
-  height: 100vh;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url('background.jpg') no-repeat fixed center;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -10;
+  padding-top: 6em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+
+.tagline {
+  color: #fff;
+  font-size: $font-l2;
+  font-weight: 700;
+  margin: -6em 1em 2em 1em;
+  text-align: center;
+}
+
+.user-auth-form {
+  padding: 0 1em 2em;
+  color: $accent-color;
+  border: 1px solid $accent-color;
+  box-shadow: 1px 1px 4px 2px $accent-color;
+  background-color: rgba(0, 0, 0, 0.7);
+
+  h2 {
+    text-align: center;
+  }
+
+  .field,
+  .actions {
+    margin-bottom: 0.8em;
+  }
+
+  &-bottom {
+    text-align: center;
+    margin-top: 1em;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+
+    p {
+      margin-top: 0.5em;
+    }
+  }
+}
+
+label {
+  font-weight: 700;
+}
+
+input {
+  margin-top: 0.4em;
+  padding: 0.4em;
+  font-size: $font-l1;
+  border: 1px solid $accent-color;
+  background-color: transparent;
+  color: $accent-color;
+
+  &:focus {
+    outline: none;
+  }
+}
+

@@ -1,0 +1,27 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.8em;
+
+  h1 {
+    font-size: 1.8rem;
+    font-family: 'Fugaz One', cursive;
+    text-transform: uppercase;
+
+    .logo {
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+
+  .links {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+
+    :not(:first-child) {
+      margin-left: 1em;
+    }
+  }
+}
