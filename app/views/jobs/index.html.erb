@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<!--<p id="notice"><%#= notice %></p>-->
 
 <h1>Jobs</h1>
 
@@ -46,13 +46,12 @@
   </tbody>
 </table>
 
-<br>
 
-<%= link_to 'New Job', new_job_path %>
+<% if user_signed_in? %>
+  <%= link_to 'Post New Job', new_job_path %> |
+  <%= link_to 'Profile', profile_path %>
+<% end %>
 
-<br/>
-
-<%= link_to 'Profile', profile_path %>
 
 
 
