@@ -1,0 +1,43 @@
+@import '../config/constants';
+
+.field_with_errors input::placeholder {
+  color: red;
+}
+
+#error_explanation {
+  border: 1px solid red;
+  padding: 0.2em 0.2em 0;
+  margin-bottom: 0.5em;
+  background-color: transparent;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 0.5em;
+  font-size: $font-s1;
+  margin: -0.2em -0.2em 0;
+  background-color: #c00;
+  color: #fff;
+}
+
+#error_explanation ul li {
+  font-size: $font-s1;
+  list-style: square;
+}
+
+.notice,
+.alert {
+  background-color: #fff;
+  text-align: center;
+  display: inline-block;
+  padding: 0 1em;
+}
+
+.notice {
+  color: green;
+}
+
+.alert {
+  color: red;
+}
