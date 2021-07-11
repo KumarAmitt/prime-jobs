@@ -1,24 +1,31 @@
-# README
+# Prime Jobs
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Prime jobs is a simple Employment website where job seekers can view the current openings and an employer can tell the world about the current openings they have.
 
-Things you may want to cover:
+#### Job Seeker:
 
-* Ruby version
+- Can view all the job postings on the home page
+- Click a specific job to view detailed information about it
+- Can view the description of the job and the concerned company information.
 
-* System dependencies
+#### Recruiter:
 
-* Configuration
+- A recruiter can create an account and post the jobs
+- A recruiter can edit the profile and update optional details which contain detailed information about the company
+- An employer can mark older openings as ARCHIVED and they will remove them from the list of the current openings; however, they can still see it on their profile page
+- An employer can update the job openings from the ARCHIVED list and uncheck the archived button in order to post a similar job.
+- An employer can edit and delete the created by the
 
-* Database creation
 
-* Database initialization
+## Live Demo
 
-* How to run the test suite
+[Click to view live](https://ancient-earth-15621.herokuapp.com/jobs)
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## Author
 
-* ...
+### 👨‍💻 Amit Kumar
+
+- GitHub: [@KumarAmitt](https://github.com/KumarAmitt)
+- LinkedIn: [@kumar-amitt](https://www.linkedin.com/in/kumar-amitt)
+
