@@ -1,0 +1,72 @@
+<div class="all-jobs-container">
+
+  <div class="main-container">
+
+    <% if user_signed_in? %>
+      <%= link_to 'Post New Job', new_job_path, class: :button %>
+      <%= link_to 'Profile', profile_path, class: :button %>
+    <% end %>
+
+    <div class="user-profile-job-list">
+
+      <div class="active-jobs">
+        <h3>All Jobs</h3>
+
+        <% @jobs.each do |j| %>
+
+          <div class="job-container">
+
+            <div class="job-container-title">
+              <div class="title"><%= j.title %></div>
+              <div class="salary"><%= j.salary %></div>
+            </div>
+
+            <div class="job-container-info">
+              <div class="job-container-info-item"><span>Education: </span><%= j.education %></div>
+              <div class="job-container-info-item"><span>Experience: </span><%= j.experience %></div>
+              <div class="job-container-info-item"><span>Openings: </span><%= j.openings %></div>
+              <div class="job-container-info-item"><span>Location: </span><%= j.location %></div>
+            </div>
+
+            <div class="job-container-bottom">
+              <% if user_signed_in? %>
+                <%= link_to 'Destroy', j, method: :delete, data: { confirm: 'Are you sure?' } %>
+                <%= link_to 'Edit', edit_job_path(j) %>
+              <% end %>
+              <%= link_to 'Show', j%>
+            </div>
+
+          </div>
+
+        <% end %>
+
+      </div>
+
+      <div class="archived-jobs">
+
+        <div>
+          <h3>Lorem ipsum dolor sit.</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci animi assumenda aut consectetur delectus dicta dolores est, fugiat hic inventore ipsa ipsum iste nostrum nulla numquam odio possimus quaerat quis quo recusandae rem, repellendus soluta tenetur velit voluptates voluptatum.</p>
+        </div>
+
+        <div>
+          <h3>Lorem ipsum.</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci autem dolor dolorum earum ex in inventore, libero recusandae rerum sit?</p>
+        </div>
+
+        <div>
+          <h3>Lorem ipsum dolor sit amet.</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto debitis facilis quaerat quos? Consequatur ipsa laudantium maxime, officiis quos saepe similique totam. Aspernatur aut delectus error itaque libero optio praesentium quia quisquam, sequi suscipit totam veniam voluptate. Aperiam, laborum velit! Ad, alias asperiores assumenda consequatur ea omnis? Deserunt dignissimos dolor ex explicabo facilis, id itaque maxime omnis ratione rem temporibus?</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+

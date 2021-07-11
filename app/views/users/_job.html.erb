@@ -1,0 +1,25 @@
+<% job.each do |j| %>
+
+  <div class="job-container">
+
+    <div class="job-container-title">
+      <div class="title"><%= j.title %></div>
+      <div class="salary"><%= j.salary %></div>
+    </div>
+
+    <div class="job-container-info">
+      <div class="job-container-info-item"><span>Education: </span><%= j.education %></div>
+      <div class="job-container-info-item"><span>Experience: </span><%= j.experience %></div>
+      <div class="job-container-info-item"><span>Openings: </span><%= j.openings %></div>
+      <div class="job-container-info-item"><span>Location: </span><%= j.location %></div>
+    </div>
+
+    <div class="job-container-bottom">
+        <%= link_to 'Destroy', j, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= link_to 'Edit', edit_job_path(j) %>
+        <%= link_to 'Show', j%>
+    </div>
+
+  </div>
+
+<% end %>

@@ -1,0 +1,75 @@
+<div class="main-container">
+
+  <div class="user-profile-job-list show-job">
+
+    <div class="active-jobs">
+      <h3>Job Details</h3>
+
+      <div class="job-container">
+
+        <div class="job-container-title">
+          <div class="title"><%= @job.title %></div>
+          <div class="salary"><%= @job.salary %></div>
+        </div>
+
+        <div class="job-container-info">
+          <div class="job-container-info-item"><span>Company: </span><%= @job.user.company_name %></div>
+          <div class="job-container-info-item"><span>Openings: </span><%= @job.openings %></div>
+          <div class="job-container-info-item"><span>Experience: </span><%= @job.experience %></div>
+          <div class="job-container-info-item"><span>Education: </span><%= @job.education %></div>
+          <div class="job-container-info-item"><span>Location: </span><%= @job.location %></div>
+          <div class="job-container-info-item"><span>Employment Type: </span><%= @job.employment_type %></div>
+
+          <div class="job-container-info-sub">
+            <h3>Job Description</h3>
+            <div class="job-container-info-item"><span>Position: </span><%= @job.position %></div>
+            <div class="job-container-info-item"><%= @job.job_description %></div>
+            <div class="job-container-info-item"><span>Skills: </span><%= @job.skills %></div>
+          </div>
+        </div>
+
+        <div class="job-container-bottom">
+
+          <% if user_signed_in? %>
+            <%= link_to 'Destroy', @job, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <%= link_to 'Edit', edit_job_path(@job) %>
+            <%= link_to 'Profile', profile_path %>
+          <% end %>
+          <%= link_to 'All jobs', jobs_path %>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="archived-jobs">
+      <h3>Company Info</h3>
+
+      <div class="job-container">
+
+        <div class="job-container-title">
+          <div class="title"><%= @job.user.company_name %></div>
+        </div>
+
+        <div class="job-container-info">
+          <div class="job-container-info-item"><span>Industry Type: </span><%= @job.user.industry_type %></div>
+          <div class="job-container-info-item"><span>Address: </span><%= @job.user.address %></div>
+          <div class="job-container-info-item"><span>Website: </span><%= @job.user.website %></div>
+          <div class="job-container-info-item"><span>Phone: </span><%= @job.user.phone %></div>
+          <div class="job-container-info-item"><span>email: </span><%= @job.user.email %></div>
+
+          <div class="job-container-info-sub">
+            <h3>About</h3>
+            <div class="job-container-info-item"><%= @job.user.about %></div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+

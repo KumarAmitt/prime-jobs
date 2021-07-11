@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Lato:wght@400;700&display=swap');
+@import "./constants";
+
+:root {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  background: linear-gradient(#1e4040, #0a1616, #1e4040);
+}

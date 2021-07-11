@@ -1,0 +1,82 @@
+@import '../config/constants';
+
+.container {
+  background-color: rgba(67, 153, 151, 0.3);
+  margin: -2em 0.5em 1em;
+  padding: 1em;
+}
+
+.user-edit {
+  display: flex;
+  flex-direction: column;
+  color: $accent-color;
+}
+
+.user-edit-top {
+  .back {
+    color: $primary-inverse-color;
+    text-decoration: none;
+  }
+
+  h2 {
+    text-align: center;
+    margin-top: 0;
+  }
+}
+
+.user-edit-middle {
+  .field {
+    margin-bottom: 1em;
+
+    label {
+      color: $primary-inverse-color;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border: 1px solid $primary-color-l2;
+    }
+
+    textarea {
+      resize: none;
+      height: 20em;
+    }
+  }
+}
+
+.user-edit-bottom {
+  border-top: 1px solid $primary-color-l2;
+  margin-top: 1.5em;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .user-edit-middle {
+    display: flex;
+
+    .user-edit-left {
+      flex: 1;
+    }
+
+    .user-edit-right {
+      flex: 2;
+      margin-left: 2em;
+    }
+  }
+}
+
+@media (min-width: 1080px) {
+  .container {
+    margin: -2em 2em 2em;
+    padding: 2em;
+  }
+
+  .user-edit-middle {
+    padding: 1em 2em;
+
+    .user-edit-right {
+      margin-left: 4em;
+    }
+  }
+}

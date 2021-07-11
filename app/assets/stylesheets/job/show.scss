@@ -1,0 +1,10 @@
+@import './config/constants';
+
+.all-jobs-container {
+  max-width: 1000px;
+  margin: 0 auto;
+
+  h3 {
+    color: $secondary-color;
+  }
+}

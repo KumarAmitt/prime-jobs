@@ -1,0 +1,50 @@
+@import '../config/constants';
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.8em;
+
+  h1 {
+    font-size: $font-l1;
+    font-family: 'Fugaz One', cursive;
+    text-transform: uppercase;
+
+    .logo {
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+
+  .links {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+
+    & > * {
+      text-decoration: none;
+      color: $accent-color;
+      margin: 0 0.5em;
+      text-transform: uppercase;
+      font-size: $font-s1;
+      font-weight: 700;
+
+      &:hover {
+        color: $primary-inverse-color;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    h1 {
+      font-size: $font-l4;
+    }
+  }
+
+  .links {
+    font-size: $font-l2;
+  }
+}

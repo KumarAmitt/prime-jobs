@@ -1,0 +1,76 @@
+<div class="main-container profile-container">
+
+  <div class="profile-container-items">
+
+    <div class="left">
+      <div class="field">
+        <h1><%= current_user.company_name %></h1>
+      </div>
+
+      <div class="field">
+        <p>Industry:</p>
+        <%= current_user.industry_type %>
+      </div>
+
+      <div class="field">
+        <p>Address:</p>
+        <%= current_user.address %>
+      </div>
+
+      <div class="field">
+        <p>Website:</p>
+        <%= current_user.website %>
+      </div>
+
+      <div class="field">
+        <p>Phone:</p>
+        <%= current_user.phone %>
+      </div>
+
+      <div class="field">
+        <p>Email:</p>
+        <%= current_user.email %>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="field">
+        <p>About:</p>
+        <%= current_user.about%>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="bottom">
+    <%= link_to 'Post New Job', new_job_path, class: 'button' %>
+  </div>
+
+
+</div>
+
+
+<div class="main-container">
+
+  <div class="user-profile-job-list">
+
+    <div class="active-jobs">
+      <h3>Active Jobs</h3>
+      <%= render 'job', job: @active_jobs %>
+    </div>
+
+    <div class="archived-jobs">
+      <h3>Archived Jobs</h3>
+      <%= render 'job', job: @archived %>
+    </div>
+
+  </div>
+
+
+</div>
+
+
+
+
+
