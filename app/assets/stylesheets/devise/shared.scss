@@ -1,7 +1,7 @@
 @import '../config/constants';
 
 .user-auth-container {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url('background.jpg') no-repeat fixed center;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), image-url('background.jpg') no-repeat fixed center;
   background-size: cover;
   position: fixed;
   top: 0;
