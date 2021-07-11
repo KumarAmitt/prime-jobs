@@ -1,0 +1,38 @@
+<div class="user-auth-container">
+
+  <div class="tagline">
+    <p>Lorem ipsum dolor sit amet, consectetur elit adipisicing</p>
+  </div>
+
+  <div class="user-auth-form">
+    <h2>Sign in</h2>
+
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+      <div class="field">
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email' %>
+      </div>
+
+      <div class="field">
+        <%= f.password_field :password, autocomplete: "current-password", placeholder: 'Password' %>
+      </div>
+
+      <% if devise_mapping.rememberable? %>
+        <div class="field">
+          <%= f.check_box :remember_me %>
+          <%= f.label :remember_me %>
+        </div>
+      <% end %>
+
+      <div class="actions">
+        <%= f.submit "Sign in", class: 'button' %>
+      </div>
+    <% end %>
+
+    <div class="user-auth-form-bottom">
+      <p>New User Registration Form</p>
+      <%= render "devise/shared/links" %>
+    </div>
+  </div>
+
+</div>
