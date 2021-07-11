@@ -29,7 +29,7 @@
             </div>
 
             <div class="job-container-bottom">
-              <% if user_signed_in? %>
+              <% if user_signed_in? && current_user.id == j.user.id %>
                 <%= link_to 'Destroy', j, method: :delete, data: { confirm: 'Are you sure?' } %>
                 <%= link_to 'Edit', edit_job_path(j) %>
               <% end %>
