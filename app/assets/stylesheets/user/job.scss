@@ -1,0 +1,42 @@
+@import '../config/constants';
+
+.job-container {
+  border: 1px solid #fff;
+  margin-bottom: 0.8em;
+  padding: 0.5em;
+
+  &-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.5em;
+
+    .title {
+      font-size: $font-l3;
+    }
+  }
+
+  &-info {
+    font-size: $font-s1;
+
+    &-item span {
+      color: $primary-inverse-color;
+    }
+  }
+
+  &-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    margin-top: 1em;
+    padding: 0.5em;
+    display: flex;
+    justify-content: space-between;
+    font-size: $font-s1;
+
+    & > * {
+      color: $primary-inverse-color;
+      text-decoration: none;
+    }
+  }
+
+
+}

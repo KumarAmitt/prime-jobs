@@ -1,0 +1,25 @@
+@import '../config/constants';
+
+.field .check-box {
+  display: flex;
+
+  .box {
+    width: 1em;
+  }
+
+  .label {
+    margin-left: 0.5em;
+    align-self: flex-end;
+  }
+}
+
+.bottom-link {
+  padding-top: 1em;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.link {
+  text-decoration: none;
+  color: $primary-inverse-color;
+}

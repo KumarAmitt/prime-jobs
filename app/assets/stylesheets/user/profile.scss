@@ -1,0 +1,36 @@
+@import '../config/constants';
+
+.main-container {
+  color: $accent-color;
+  border: 1px solid rgba(98, 196, 196, 0.7);
+  box-shadow: 1px 1px 4px 2px rgba(98, 196, 196, 0.7);
+  margin: 1em 2em;
+  padding: 1em;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+
+  .field {
+    h1 {
+      font-size: $font-l4;
+    }
+
+    p {
+      color: $primary-inverse-color;
+      font-size: $font-s1;
+      font-weight: 700;
+      margin-bottom: 0;
+    }
+  }
+
+  .bottom {
+    margin: 2em auto 1em;
+    align-self: center;
+  }
+}
+
+.info {
+  font-size: 2rem;
+}

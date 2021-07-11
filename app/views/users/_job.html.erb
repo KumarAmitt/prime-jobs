@@ -1,0 +1,45 @@
+<%# job.each do |job| %>
+<!--    <tr>-->
+<!--      <td><%#= job.user_id %></td>-->
+<!--      <td><%#= job.title %></td>-->
+<!--      <td><%#= job.position %></td>-->
+<!--      <td><%#= job.location %></td>-->
+<!--      <td><%#= job.experience %></td>-->
+<!--      <td><%#= job.salary %></td>-->
+<!--      <td><%#= job.openings %></td>-->
+<!--      <td><%#= job.employment_type %></td>-->
+<!--      <td><%#= job.education %></td>-->
+<!--      <td><%#= job.skills %></td>-->
+<!--      <td><%#= job.job_description %></td>-->
+<!--      <td><%#= job.archived %></td>-->
+<!--      <td><%#= link_to 'Show', job %></td>-->
+<!--      <td><%#= link_to 'Edit', edit_job_path(job) %></td>-->
+<!--      <td><%#= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+<!--    </tr>-->
+<%# end %>
+
+<% job.each do |j| %>
+
+  <div class="job-container">
+
+    <div class="job-container-title">
+      <div class="title"><%= j.title %></div>
+      <div class="salary"><%= j.salary %></div>
+    </div>
+
+    <div class="job-container-info">
+      <div class="job-container-info-item"><span>Education: </span><%= j.education %></div>
+      <div class="job-container-info-item"><span>Experience: </span><%= j.experience %></div>
+      <div class="job-container-info-item"><span>Openings: </span><%= j.openings %></div>
+      <div class="job-container-info-item"><span>Location: </span><%= j.location %></div>
+    </div>
+
+    <div class="job-container-bottom">
+        <%= link_to 'Destroy', j, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= link_to 'Edit', edit_job_path(j) %>
+        <%= link_to 'Show', j%>
+    </div>
+
+  </div>
+
+<% end %>
