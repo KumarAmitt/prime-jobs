@@ -12,5 +12,4 @@ class ApplicationController < ActionController::Base
                :current_password, :address, :website, :phone, :about)
     end
   end
-
 end

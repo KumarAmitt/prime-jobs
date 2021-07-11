@@ -28,14 +28,13 @@
 
 .notice,
 .alert {
-  background-color: #fff;
   text-align: center;
   display: inline-block;
   padding: 0 1em;
 }
 
 .notice {
-  color: green;
+  color: $secondary-color;
 }
 
 .alert {

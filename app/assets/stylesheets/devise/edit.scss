@@ -1,7 +1,7 @@
 @import '../config/constants';
 
 .container {
-  background-color: $primary-color;
+  background-color: rgba(67, 153, 151, 0.3);
   margin: -2em 0.5em 1em;
   padding: 1em;
 }
@@ -50,7 +50,6 @@
   margin-top: 1.5em;
   text-align: center;
 }
-
 
 @media (min-width: 768px) {
   .user-edit-middle {

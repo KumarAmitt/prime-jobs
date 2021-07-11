@@ -33,10 +33,13 @@
     font-size: $font-s1;
 
     & > * {
-      color: $primary-inverse-color;
+      color: $secondary-color;
       text-decoration: none;
+      text-transform: uppercase;
+
+      &:hover {
+        color: $primary-inverse-color;
+      }
     }
   }
-
-
 }
