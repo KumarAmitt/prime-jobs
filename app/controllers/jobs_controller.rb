@@ -5,7 +5,7 @@ class JobsController < ApplicationController
 
   # GET /jobs or /jobs.json
   def index
-    @jobs = Job.recent_first
+    @jobs = Job.active.recent_first
   end
 
   # GET /jobs/1 or /jobs/1.json
