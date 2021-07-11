@@ -1,5 +1,23 @@
-<h1>New Job</h1>
+<!--<h1>New Job</h1>-->
 
-<%= render 'form', job: @job %>
+<%#= render 'form', job: @job %>
 
-<%= link_to 'Back', profile_path %>
+<%#= link_to 'Back', profile_path %>
+
+
+
+
+<div class="container user-edit">
+
+  <div class="user-edit-top">
+    <%= link_to "<< Back", profile_path, class: 'back' %>
+    <h2>New Job</h2>
+  </div>
+
+  <%= render 'form', job: @job %>
+
+  <div class="user-edit-bottom bottom-link">
+    <%= link_to 'Show', @job, class: :link %>
+  </div>
+
+</div>

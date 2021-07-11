@@ -1,56 +1,71 @@
-<!--<p id="notice"><%#= notice %></p>-->
+<div class="all-jobs-container">
 
-<h1>Jobs</h1>
+  <div class="main-container">
 
-<table>
-  <thead>
-    <tr>
-      <th>User_id</th>
-      <th>Title</th>
-      <th>Position</th>
-      <th>Location</th>
-      <th>Experience</th>
-      <th>Salary</th>
-      <th>Openings</th>
-      <th>Employment Type</th>
-      <th>Education</th>
-      <th>Skills</th>
-      <th>Job Description</th>
-      <th>Archived</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @jobs.each do |job| %>
-      <tr>
-        <td><%= job.user_id %></td>
-        <td><%= job.title %></td>
-        <td><%= job.position %></td>
-        <td><%= job.location %></td>
-        <td><%= job.experience %></td>
-        <td><%= job.salary %></td>
-        <td><%= job.openings %></td>
-        <td><%= job.employment_type %></td>
-        <td><%= job.education %></td>
-        <td><%= job.skills %></td>
-        <td><%= job.job_description %></td>
-        <td><%= job.archived %></td>
-        <% if current_user && current_user.id == job.user_id %>
-          <td><%= link_to 'Show', job %></td>
-          <td><%= link_to 'Edit', edit_job_path(job) %></td>
-          <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
-      </tr>
+    <% if user_signed_in? %>
+      <%= link_to 'Post New Job', new_job_path, class: :button %>
+      <%= link_to 'Profile', profile_path, class: :button %>
     <% end %>
-  </tbody>
-</table>
 
+    <div class="user-profile-job-list">
 
-<% if user_signed_in? %>
-  <%= link_to 'Post New Job', new_job_path %> |
-  <%= link_to 'Profile', profile_path %>
-<% end %>
+      <div class="active-jobs">
+        <h3>All Jobs</h3>
+
+        <% @jobs.each do |j| %>
+
+          <div class="job-container">
+
+            <div class="job-container-title">
+              <div class="title"><%= j.title %></div>
+              <div class="salary"><%= j.salary %></div>
+            </div>
+
+            <div class="job-container-info">
+              <div class="job-container-info-item"><span>Education: </span><%= j.education %></div>
+              <div class="job-container-info-item"><span>Experience: </span><%= j.experience %></div>
+              <div class="job-container-info-item"><span>Openings: </span><%= j.openings %></div>
+              <div class="job-container-info-item"><span>Location: </span><%= j.location %></div>
+            </div>
+
+            <div class="job-container-bottom">
+              <% if user_signed_in? %>
+                <%= link_to 'Destroy', j, method: :delete, data: { confirm: 'Are you sure?' } %>
+                <%= link_to 'Edit', edit_job_path(j) %>
+              <% end %>
+              <%= link_to 'Show', j%>
+            </div>
+
+          </div>
+
+        <% end %>
+
+      </div>
+
+      <div class="archived-jobs">
+
+        <div>
+          <h3>Lorem ipsum dolor sit.</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci animi assumenda aut consectetur delectus dicta dolores est, fugiat hic inventore ipsa ipsum iste nostrum nulla numquam odio possimus quaerat quis quo recusandae rem, repellendus soluta tenetur velit voluptates voluptatum.</p>
+        </div>
+
+        <div>
+          <h3>Lorem ipsum.</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci autem dolor dolorum earum ex in inventore, libero recusandae rerum sit?</p>
+        </div>
+
+        <div>
+          <h3>Lorem ipsum dolor sit amet.</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto debitis facilis quaerat quos? Consequatur ipsa laudantium maxime, officiis quos saepe similique totam. Aspernatur aut delectus error itaque libero optio praesentium quia quisquam, sequi suscipit totam veniam voluptate. Aperiam, laborum velit! Ad, alias asperiores assumenda consequatur ea omnis? Deserunt dignissimos dolor ex explicabo facilis, id itaque maxime omnis ratione rem temporibus?</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
 
 
 
